@@ -5,12 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:todo/Authorize/controllers/auth/user_controller.dart';
-// import 'package:todo/features/onboard/login_page.dart';
-import 'package:todo/features/onboard/onboard_screen.dart';
-// import 'package:todo/features/onboard/welcome_page.dart';
+import 'package:todo/features/onboard/splash_screen.dart';
 import 'package:todo/utilties/constants.dart';
 import 'package:todo/utilties/user_model.dart';
-import 'package:todo/features/onboard/dashboard_home.dart';
 import 'Authorize/controllers/routes.dart';
 import 'firebase_options.dart';
 
@@ -54,7 +51,7 @@ class MyApp extends ConsumerWidget {
                 scaffoldBackgroundColor: Constants.kBlueDark.withOpacity(.2),
                 useMaterial3: true
               ),
-              home: users.isEmpty? const OnBoard():const HomeScreen(),
+              home: const SplashScreen(),
               debugShowCheckedModeBanner: false,
               onGenerateRoute: Routes.onGenerated,
             );

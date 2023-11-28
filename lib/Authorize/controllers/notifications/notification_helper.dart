@@ -31,7 +31,7 @@ class NotificationHelper {
             onDidReceiveLocalNotification: onDidReceiveLocalNotification);
 
     const AndroidInitializationSettings androidInitializationSettings =
-        AndroidInitializationSettings('ic_launcher');
+        AndroidInitializationSettings('todo_app_icon');
 
     final InitializationSettings initializationSettings =
         InitializationSettings(

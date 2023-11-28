@@ -55,6 +55,8 @@ dependencies:
   hive: ^2.2.3
   awesome_notifications:
   easy_localization: ^3.0.3
+  connectivity: ^3.0.6
+  lottie: ^2.6.0
 
 dev_dependencies:
   flutter_test:
@@ -88,6 +90,7 @@ flutter:
     - assets/bell.png
     - assets/bell2.png
     - assets/reminder-2.png
+    - assets/lottie/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
