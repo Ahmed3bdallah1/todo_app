@@ -25,7 +25,7 @@ class _AddTodoState extends ConsumerState<AddTodo> {
 
   late NotificationHelper notificationHelper;
   late NotificationHelper helperController;
-  List<int> notifications = [];
+  int notifications = 0;
 
   @override
   void initState() {
@@ -135,8 +135,9 @@ class _AddTodoState extends ConsumerState<AddTodo> {
                       ref
                           .read(startTimeStateProvider.notifier)
                           .setState(date.toString());
-                      notifications =
-                          ref.read(startTimeStateProvider.notifier).dates(date);
+                      notifications = ref
+                          .read(startTimeStateProvider.notifier)
+                          .inSecondsNotificationDate(date);
                     }, locale: picker.LocaleType.en);
                   },
                   child: Container(
@@ -204,33 +205,31 @@ class _AddTodoState extends ConsumerState<AddTodo> {
                       reminder: 0,
                       repeat: "yes");
                   notificationHelper.scheduledNotifications(
-                      notifications[0],
-                      notifications[1],
-                      notifications[2],
-                      notifications[3],
-                      taskModel);
+                      notifications, taskModel);
                   ref.read(todoStateProvider.notifier).addItem(taskModel);
                   ref.read(dateStateProvider.notifier).setState("");
                   ref.read(finishTimeStateProvider.notifier).setState("");
                   ref.read(startTimeStateProvider.notifier).setState("");
                   Navigator.pop(context);
                 } else {
-                  showDialog(context: context, builder: (_){
-                    return CupertinoAlertDialog(
-                      title: const Text("failed to add the task"),
-                      content: const Text(
-                        "please be sure that you entered all todo's data",
-                      ),
-                      actions: [
-                        CupertinoDialogAction(
-                            isDestructiveAction: true,
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: const Text('close')),
-                      ],
-                    );
-                  });
+                  showDialog(
+                      context: context,
+                      builder: (_) {
+                        return CupertinoAlertDialog(
+                          title: const Text("failed to add the task"),
+                          content: const Text(
+                            "please be sure that you entered all todo's data",
+                          ),
+                          actions: [
+                            CupertinoDialogAction(
+                                isDestructiveAction: true,
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Text('close')),
+                          ],
+                        );
+                      });
                 }
               },
               child: Container(

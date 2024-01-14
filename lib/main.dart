@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:todo/Authorize/controllers/auth/user_controller.dart';
+import 'package:todo/Authorize/controllers/auth/user_provider.dart';
 import 'package:todo/features/onboard/splash_screen.dart';
 import 'package:todo/utilties/constants.dart';
 import 'package:todo/utilties/user_model.dart';

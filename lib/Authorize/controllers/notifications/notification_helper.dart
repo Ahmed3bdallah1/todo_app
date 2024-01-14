@@ -83,6 +83,10 @@ class NotificationHelper {
                 CupertinoDialogAction(
                   child: const Text('View'),
                   onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const NotificationsPage()));
                     Navigator.pop(context);
                   },
                 )
@@ -90,15 +94,13 @@ class NotificationHelper {
             ));
   }
 
-  scheduledNotifications(
-      int day, int hours, int minutes, int seconds, TaskModel taskModel) async {
+  scheduledNotifications(int minutes, TaskModel taskModel) async {
     print("schedled");
     await flutterLocalNotificationsPlugin.zonedSchedule(
         taskModel.id ?? 0,
         taskModel.title,
         taskModel.description,
-        time.TZDateTime.now(time.local).add(Duration(
-            days: day, hours: hours, minutes: minutes, seconds: seconds)),
+        time.TZDateTime.now(time.local).add(Duration(minutes: minutes)),
         const NotificationDetails(
             android: AndroidNotificationDetails(
           "your channel id",

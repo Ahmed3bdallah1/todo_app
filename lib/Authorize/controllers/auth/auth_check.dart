@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todo/Authorize/controllers/auth/user_controller.dart';
+import 'package:todo/Authorize/controllers/auth/user_provider.dart';
 import 'package:todo/features/onboard/dashboard_home.dart';
 import 'package:todo/features/onboard/onboard_screen.dart';
 
