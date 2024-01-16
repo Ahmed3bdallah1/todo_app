@@ -7,6 +7,8 @@ A todo management app with flutter.
 
 ⚫ State Management: using the Riverpod pattern for efficient state management package to provide smooth view, including add, update and delete functionality)
 
+https://github.com/Ahmed3bdallah1/todo_app/assets/122252444/2f7bae9d-8c43-487c-9f46-d3eac399f161
+
 ⚫ Accesses to network :using the connectivity package for the login
 
 ⚫ Navigation : Enables effortless navigation, allowing users to effortlessly move between the screens using generated routes (next and previous)
