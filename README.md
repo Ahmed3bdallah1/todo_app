@@ -1,16 +1,20 @@
 # todo
 
-A new Flutter project.
+A todo management app with flutter.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+⚫ Responsive UI: Delivers an optimal viewing experience across various screen sizes and devices using flutter_screenutil package
 
-A few resources to get you started if this is your first Flutter project:
+⚫ State Management: using the Riverpod pattern for efficient state management package to provide smooth view, including add, update and delete functionality)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+⚫ Accesses to network :using the connectivity package for the login
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+⚫ Navigation : Enables effortless song navigation, allowing users to effortlessly move between the screens using generated routes (next and previous)
+
+⚫ Accesses Local Storage:using the Sqflite package to access the local storage
+
+⚫ Fetches todos: Efficiently retrieves todo tiles from the device's storage using the sqflite package
+
+⚫ Firebase: Using firebase auth to login via phone number otp
+
+⚫ Notifications : Sending scheduled local notifications to the user as a reminder for the today's tasks
