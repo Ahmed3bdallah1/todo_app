@@ -18,3 +18,5 @@ A todo management app with flutter.
 ⚫ Firebase: Using firebase auth to login via phone number otp
 
 ⚫ Notifications : Sending scheduled local notifications to the user as a reminder for the today's tasks
+
+![WhatsApp Image 2024-01-16 at 21 58 26_3e3ead20](https://github.com/Ahmed3bdallah1/todo_app/assets/122252444/1e69fb7e-ae2d-4027-9519-4e444a111eca)
