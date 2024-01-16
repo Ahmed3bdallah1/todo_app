@@ -9,7 +9,7 @@ A todo management app with flutter.
 
 ⚫ Accesses to network :using the connectivity package for the login
 
-⚫ Navigation : Enables effortless song navigation, allowing users to effortlessly move between the screens using generated routes (next and previous)
+⚫ Navigation : Enables effortless navigation, allowing users to effortlessly move between the screens using generated routes (next and previous)
 
 ⚫ Accesses Local Storage:using the Sqflite package to access the local storage
 
